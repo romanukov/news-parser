@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>UI/Checkbox-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="66.67%" y1="16.67%" x2="41.67%" y2="75%" id="linearGradient-1">
+            <stop stop-color="#37AEE2" offset="0%"></stop>
+            <stop stop-color="#1E96C8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Pages-final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Change-feed---Copy-4" transform="translate(-367.000000, -334.000000)">
+            <g id="UI/Checkbox-2" transform="translate(367.000000, 334.000000)">
+                <rect id="Rectangle-3" fill="url(#linearGradient-1)" x="0" y="0" width="16" height="16" rx="4"></rect>
+                <g id="if_checkmark-24_103184" stroke-width="1" transform="translate(3.000000, 4.500000)" fill="#FAFDFF">
+                    <path d="M9.02288852,0.0922284904 C8.90078865,-0.0307428301 8.70201173,-0.0307428301 8.58074531,0.0922284904 L3.92136435,4.73137367 C3.79926448,4.85517869 3.60007084,4.85517869 3.47880442,4.73137367 L1.43727796,2.65169937 C1.37685312,2.59000528 1.29767573,2.55957509 1.21808162,2.55915824 C1.13765406,2.55874139 1.05597633,2.58917158 0.994718035,2.65169937 L0.0925125277,3.46289323 C0.0325044016,3.52458732 0,3.60170492 0,3.68215735 C0,3.76302662 0.0325044016,3.84764757 0.0929292508,3.9089248 L2.15154135,6.06988523 C2.2732245,6.1932734 2.47283486,6.39336233 2.59410128,6.5159168 L3.47922114,7.40839679 C3.60090429,7.5305344 3.79968121,7.5305344 3.92178107,7.40839679 L9.9084251,1.43074005 C10.030525,1.30818558 10.030525,1.1068461 9.9084251,0.98429163 L9.02288852,0.0922284904 Z" id="Shape" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+.popover {
+  max-width: none !important;
+}
+.subscribe-text {
+  font-size: 15px;
+  color: rgb(1, 55, 82);
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+.error-block {
+  background-color: #faf6f5;
+  border: solid 1px #f0d3d3;
+  text-align: center;
+  color: #f56767;
+  padding: 5px;
+  border-radius: 5px;
+}
+.note-block {
+  background-color: #f1f1ff;
+  border: solid 1px #d3d3f0;
+  text-align: center;
+  color: #676791;
+  padding: 5px;
+  border-radius: 5px;
+}
+.notification {
+  width: 100%;
+  border-radius: 6px;
+  background-color: #f7f9fa;
+  border: 1px solid #d9dcde;
+  padding: 7px 10px;
+  position: relative;
+}
+.notification + .notification {
+  margin-top: 10px;
+}
+.notifications {
+  width: calc(100% - 46px);
+  max-width: 301px;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999999;
+}
+.notification.notification--err {
+  background-color: #faf6f5;
+  border: solid 1px #f0d3d3;
+}
+.notification--err .notification__header {
+  color: #f56767;
+}
+.notification--err .notification__icon svg {
+  fill: #f56767;
+}
+.notification > div {
+  display: inline-block;
+}
+.notification__icon {
+  width: 25px;
+  height: 42px;
+  display: inline-flex !important;
+  background: transparent;
+  float: left;
+}
+.notification__icon > div {
+  margin: auto;
+}
+.notification__icon svg {
+  height: 30px;
+  width: 30px;
+  fill: #91a7b3;
+}
+.notification__body-container {
+  width: calc(100% - 40px);
+  padding-left: 10px;
+  white-space: pre-line;
+}
+.notification__header {
+  font-family: 'Roboto';
+  font-size: 12px;
+  width: calc(100% - 20px);
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #424761;
+}
+.notification__body {
+  font-family: Roboto;
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #424761;
+}
+.notification__exit {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  cursor: pointer;
+}
+.notification__exit svg {
+  fill: #91a7b3;
+}
+.notification__exit:hover svg {
+  fill: #424761;
+}
+
+
+
+
+.centrify, .centrify-x, .centrify-y {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.centrify-content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.centrify-content > * {
+  margin: 0 !important;
+}
+.centrify > * {
+  margin: auto;
+}
+.centrify-x > * {
+  margin: 0 auto;
+}
+.centrify-y > * {
+  margin: auto 0;
+}
+.custom-control-label::before {
+  background: #fff;
+  border: 2px solid #d8dde6;
+}
+.ion {
+  position: relative;
+  fill: white;
+  display: inline-block;
+  top: 3px;
+}
+.btn-action {
+  cursor: pointer;
+}
+.btn-action svg {
+  width: 20px;
+  height: 20px;
+}
+.btn-action-edit svg,
+.btn-action-remove svg {
+  fill: #91a7b3;
+}
+.btn-action-edit svg:hover {
+  fill: #189cde;
+}
+.btn-action-remove svg:hover {
+  fill: #f56767;
+}
+
+thead tr, thead th {
+  border-top: 0 !important;
+  border-color: #189cde !important;
+}
+table {
+  border-top: 0;
+}
+.font-roboto {
+  font-family: 'Roboto';
+}
+.font-opensans {
+  font-family: 'Open Sans';
+}
+
+.content--full {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 56px;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+.ps__scrollbar-y {
+  width: 4px !important;
+  background-color: #91a7b3 !important;
+  border-radius: 3px !important;
+}
+.ps__scrollbar-y-rail {
+  width: 8px !important;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}

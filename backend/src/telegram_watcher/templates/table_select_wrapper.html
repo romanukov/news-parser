@@ -1,0 +1,24 @@
+{% load i18n static %}
+<div class="related-widget-wrapper">
+    {{ rendered_widget }}
+    {% block links %}
+        {% spaceless %}
+        <input type="text" id="id_sources">
+        <a class="related-widget-wrapper-link add-related" id="add_id_{{ name }}"
+            href="/gotoadmin/telegram_watcher/source/?{{ url_params }}"
+            title="{% blocktrans %}Add another {{ model }}{% endblocktrans %}">
+            <img src="{% static 'admin/img/icon-addlink.svg' %}" alt="{% trans 'Add' %}">
+        </a>
+        {% endspaceless %}
+        <script>
+            var id_sources = document.getElementById('id_sources');
+            var id = "";
+            setInterval(function () {
+                if (id_sources.value !== id) {
+                    id = id_sources.value;
+                    console.log(id);
+                }
+            }, 500)
+        </script>
+    {% endblock %}
+</div>

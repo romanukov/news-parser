@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfiles/app/Dockerfile
+    command: gunicorn app.wsgi -c gunicorn.py --reload --log-level debug --access-logfile -
+    volumes:
+      - ./backend:/backend
+      - ./media:/backend/src/media
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - postgres
+
+  web:
+    image: nginx
+    volumes:
+      - ./dockerfiles/nginx/dev.conf:/etc/nginx/conf.d/default.conf
+      - ./media:/usr/share/nginx/media
+
+    depends_on:
+      - webpack
+      - app
+    restart: on-failure
+
+  webpack:
+    environment:
+      HOST: 0.0.0.0
+    ports:
+      - 8080:8080
+    command: sh entrypoint.sh dev
+
+  postgres:
+    restart: unless-stopped
+
+    image: postgres:9.6
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./postgresql.conf:/var/lib/postgresql/data/postgresql.conf
+    environment:
+      POSTGRES_DB: tg_parser
+      POSTGRES_USER: tg_parser
+      POSTGRES_PASSWORD: tg_parser
+
+volumes:
+  pg-data:
+    driver: local
+
+
+networks:
+  default:
+    external:
+      name: tg_parser

@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+    <table>
+    <tr>
+        <td>RSS</td>
+        <td>{{ rss_worker.last_message.date }}, {{ rss_worker.last_message }}</td>
+    </tr>
+    <tr>
+        <td>Twitter</td>
+        <td>{{ twitter_worker.last_message.date }}, {{ twitter_worker.last_message }}</td>
+    </tr>
+    <tr>
+        <td>Telegram</td>
+        <td>{{ telegram_worker.last_message.date }}, {{ telegram_worker.last_message }}</td>
+    </tr>
+    </table>
+{% endblock %}

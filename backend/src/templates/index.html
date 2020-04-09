@@ -1,0 +1,36 @@
+{% extends "admin/index.html" %}
+{% load i18n static %}
+{% block extrahead %}
+<style type="text/css">
+    .dashboard #content {
+        width: auto;
+        padding: 0 20px;
+    }
+</style>
+<link rel="stylesheet" href="/django-static/vue/css/app.css">
+{% endblock %}
+{% block userlinks %}
+    <a href="/telegram_watcher">Settings</a> /
+    {% if user.is_active and user.is_staff %}
+        {% url 'django-admindocs-docroot' as docsroot %}
+        {% if docsroot %}
+            <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+        {% endif %}
+    {% endif %}
+    <a href="admin/telegram_watcher/user/{{user.pk}}/change/">{% trans 'Profile' %}</a> /
+    {% if user.has_usable_password %}
+    <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+    {% endif %}
+    <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+{% endblock %}
+{% block coltype %}{% endblock %}
+{% block content %}
+<div id="app">
+</div>
+<script src="/django-static/vue/js/manifest.js"></script>
+<script src="/django-static/vue/js/vendor.js"></script>
+<script src="/django-static/vue/js/app.js"></script>
+<!--<script src="http://127.0.0.1:8080/app.js"></script>-->
+{% endblock %}
+{% block sidebar %}
+{% endblock %}
