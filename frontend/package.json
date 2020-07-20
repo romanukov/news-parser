@@ -13,7 +13,7 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "bootstrap-vue": "^2.0.0-rc.11",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.17",
     "perfect-scrollbar": "^1.4.0",
