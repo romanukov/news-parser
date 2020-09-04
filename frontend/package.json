@@ -23,7 +23,7 @@
     "vue-infinite-scroll": "^2.0.2",
     "vue-ionicons": "^2.2.1",
     "vue-masonry": "^0.11.1",
-    "vue-moment": "^4.0.0-0",
+    "vue-moment": "^4.1.0",
     "vue-native-websocket": "^2.0.7",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-rangedate-picker": "^0.3.4",
